@@ -10,10 +10,12 @@ function AppRoutes() {
         <BrowserRouter>
             <Cabecalho />
             <Container>
-                <Routes>
-                    <Route path="/" element={<Inicio />}></Route>
-                    <Route path="/favoritos" element={<Favoritos />}></Route>
-                </Routes>
+                <FavoritosProvider>
+                    <Routes>
+                        <Route path="/" element={<Inicio />}></Route>
+                        <Route path="/favoritos" element={<Favoritos />}></Route>
+                    </Routes>
+                </FavoritosProvider>
             </Container>
             <Rodape />
         </BrowserRouter>
